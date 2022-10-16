@@ -1,0 +1,32 @@
+jwt:
+  secret: health_care@2022
+  validity: 2000
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5433/health_clinic
+    username: pricedb
+    password: pricedb@2022
+    driverClassName: org.postgresql.Driver
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: healthclinicapp@gmail.com
+    password: irfvtwdebqnlvmor
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
