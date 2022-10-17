@@ -12,7 +12,7 @@ public class DateUtil {
     }
 
     public static LocalDate getMondayOfWeek() {
-        LocalDate monday = LocalDate.now().plusWeeks(1);
+        LocalDate monday = LocalDate.now();
         while (monday.getDayOfWeek() != DayOfWeek.MONDAY) {
             monday = monday.minusDays(1);
         }
@@ -20,7 +20,7 @@ public class DateUtil {
     }
 
     public static LocalDate getSundayOfWeek() {
-        LocalDate sunday = LocalDate.now().plusWeeks(1);
+        LocalDate sunday = LocalDate.now();
         while (sunday.getDayOfWeek() != DayOfWeek.SUNDAY) {
             sunday = sunday.plusDays(1);
         }
